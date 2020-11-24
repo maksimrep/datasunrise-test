@@ -92,8 +92,12 @@ class BookController extends Controller
      * Need to implement remove function
      *
      */
-    public function remove()
+    public function remove($bookId)
     {
-
+        $book = Book::findOrFail($bookId);
+        if($book)
+            $book->delete(); 
+        else
+            return response()->json(null); 
     }
 }
