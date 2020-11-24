@@ -1,3 +1,5 @@
+composer update
+
 sudo chmod -R 777 storage bootstrap/cache
 
 mv .env.example .env
